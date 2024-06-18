@@ -40,7 +40,7 @@ export class UsersController {
 
   @Post('registration')
   @HttpCode(204)
-  @UseGuards(BasicAuthGuard)
+  @UseGuards()
   async registration(@Body() dto: UserCreateValid) {
     const result: ResponseToControllersHelper =
       await this.usersService.registration(dto);
@@ -49,7 +49,7 @@ export class UsersController {
   }
   @Post('login')
   @HttpCode(200)
-  @UseGuards(BasicAuthGuard)
+  @UseGuards()
   async login(@Body() dto: UserLoginValid) {
     const result: ResponseToControllersHelper =
       await this.usersService.login(dto);
