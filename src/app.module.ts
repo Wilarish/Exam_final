@@ -14,6 +14,7 @@ import { ReportService } from './1-services/report.service';
 import { ReportRepository } from './2-repositories/report.repository';
 import { ReportsQueryRepository } from './2-repositories/query/report.query.repository';
 import { LoginIsExistValidator } from './7-config/pipes/is-login-exist';
+import { TestController } from './0-controlllers/test.controller';
 
 @Module({
   imports: [
@@ -36,7 +37,7 @@ import { LoginIsExistValidator } from './7-config/pipes/is-login-exist';
       // },
     ]),
   ],
-  controllers: [UsersController, ReportController],
+  controllers: [UsersController, ReportController, TestController],
   providers: [
     UsersService,
     ReportService,
